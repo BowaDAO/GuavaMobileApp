@@ -1,12 +1,24 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { Stack, Tabs } from "expo-router";
+import { TabNavigator } from "./src/Navigations";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <Tabs>
-      <Tabs.Screen name="Feed" />
-    </Tabs>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Bottom_Tabs">
+        <Stack.Screen
+          name="Bottom_Tabs"
+          component={TabNavigator}
+          options={{
+            title: "AA",
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
