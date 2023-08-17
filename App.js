@@ -22,6 +22,8 @@ const App = () => {
             title: "AA",
           }}
         />
+
+        {/* <Stack.Screen/> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

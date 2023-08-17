@@ -46,7 +46,7 @@ const TabNavigator = () => {
         tabBarActiveTintColor: colors.purple,
         tabBarLabelStyle: { fontSize: 12, fontWeight: "700" },
         headerTitleStyle: { fontSize: 20, fontWeight: "700" },
-        headerShadowVisible: false,
+        // headerShadowVisible: false,
       })}
     >
       <Tab.Screen name="Feed" component={Feed}></Tab.Screen>
