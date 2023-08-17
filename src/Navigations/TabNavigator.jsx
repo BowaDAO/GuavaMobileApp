@@ -1,7 +1,7 @@
 import { Image, StyleSheet } from "react-native";
 import { Bookmark, Feed, Category, More } from "../TabScreens";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { icon, colors } from "../../constants";
+import { icon, colors, FONTS } from "../../constants";
 
 const Tab = createBottomTabNavigator();
 
@@ -44,9 +44,17 @@ const TabNavigator = () => {
           }
         },
         tabBarActiveTintColor: colors.purple,
-        tabBarLabelStyle: { fontSize: 12, fontWeight: "700" },
-        headerTitleStyle: { fontSize: 20, fontWeight: "700" },
-        // headerShadowVisible: false,
+        tabBarLabelStyle: {
+          fontSize: 14,
+          fontWeight: "700",
+          fontFamily: FONTS.medium,
+        },
+        headerTitleStyle: {
+          fontSize: 20,
+          fontWeight: "700",
+          fontFamily: FONTS.medium,
+        },
+        headerShadowVisible: false,
       })}
     >
       <Tab.Screen name="Feed" component={Feed}></Tab.Screen>

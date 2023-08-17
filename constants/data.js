@@ -88,7 +88,7 @@ export const postsData = [
   {
     id: 4,
     image: icon.dummyimage,
-    title: "How to become a top software engineer",
+    title: "How to become a top software engineer. ",
     category: "frontend engineering",
     time: "1 day",
     readTime: "2 min",
@@ -104,7 +104,7 @@ export const postsData = [
   {
     id: 6,
     image: icon.dummyimage,
-    title: "How to become a top soft eng",
+    title: "How to become a top soft eng How to become ",
     category: "frontend engineering",
     time: "1 day",
     readTime: "2 min",

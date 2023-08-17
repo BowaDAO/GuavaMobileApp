@@ -1,9 +1,9 @@
-import { View, Text, Pressable, StyleSheet } from "react-native";
-import { colors } from "../../constants";
+import { ScrollView, Text, Pressable, StyleSheet } from "react-native";
+import { FONTS, colors } from "../../constants";
 
 const More = () => {
   return (
-    <View style={styles.body}>
+    <ScrollView style={styles.body}>
       <Pressable style={styles.wrapper}>
         <Text style={styles.text}>Notifications</Text>
       </Pressable>
@@ -25,7 +25,7 @@ const More = () => {
       <Pressable style={styles.wrapper}>
         <Text style={styles.text}>Rate Us</Text>
       </Pressable>
-    </View>
+    </ScrollView>
   );
 };
 const styles = StyleSheet.create({
@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     fontWeight: "500",
+    fontFamily: FONTS.medium,
   },
 });
 export default More;

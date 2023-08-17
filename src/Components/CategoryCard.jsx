@@ -1,5 +1,5 @@
 import { Text, StyleSheet, TouchableOpacity } from "react-native";
-import { colors } from "../../constants";
+import { FONTS, colors } from "../../constants";
 
 const CategoryCard = ({ item }) => {
   return (
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 16,
     fontWeight: "700",
+    fontFamily: FONTS.bold,
     padding: 5,
   },
 });

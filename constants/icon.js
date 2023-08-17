@@ -7,6 +7,7 @@ import coloredbookmark from "../assets/icons/coloredbookmark.png";
 import coloredmore from "../assets/icons/coloredmore.png";
 import coloredcategory from "../assets/icons/coloredcategory.png";
 import search from "../assets/icons/search.png";
+import arrowback from "../assets/icons/arrowback.png";
 
 import dummyimage from "../assets/icons/dummyimage.png";
 
@@ -21,4 +22,5 @@ export default {
   coloredmore,
   search,
   dummyimage,
+  arrowback,
 };

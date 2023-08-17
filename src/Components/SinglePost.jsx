@@ -7,12 +7,22 @@ import {
   Touchable,
   TouchableOpacity,
 } from "react-native";
-import { colors } from "../../constants";
+import { FONTS, colors } from "../../constants";
+import { useNavigation } from "@react-navigation/native";
 
 // Component that renders single post card on the feed
 const SinglePost = ({ post }) => {
+  const navigation = useNavigation();
+
+  const onPress = () => {
+    navigation.navigate("Details", { post });
+  };
+
   return (
-    <TouchableOpacity style={[styles.container, styles.shadowProp]}>
+    <TouchableOpacity
+      style={[styles.container, styles.shadowProp]}
+      onPress={onPress}
+    >
       <View style={styles.image_container}>
         <Image source={post.image} resizeMode="contain" style={styles.image} />
       </View>
@@ -34,15 +44,18 @@ const SinglePost = ({ post }) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 105,
+    flex: 1,
+    height: "100%",
     width: "100%",
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
+    backgroundColor: colors.white,
+    paddingVertical: 3,
   },
   image_container: {
     width: 135,
-    height: "100%",
+    height: 105,
     borderRadius: 10,
   },
   image: {
@@ -60,12 +73,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     gap: "100%",
-    // gap: 50,
   },
   post_title: {
     flexWrap: "wrap",
     fontSize: 18,
     fontWeight: "400",
+    fontFamily: FONTS.regular,
   },
   category_container: {
     backgroundColor: colors.purple,
@@ -78,15 +91,18 @@ const styles = StyleSheet.create({
     textTransform: "capitalize",
     fontSize: 10,
     fontWeight: "700",
+    fontFamily: FONTS.regular,
   },
   time: {
     fontSize: 12,
+    fontFamily: FONTS.regular,
   },
   shadowProp: {
-    shadowColor: colors.white,
-    shadowOffset: { width: -2, height: 3 },
-    shadowOpacity: 0.2,
-    shadowRadius: 3,
+    // shadowColor: "#000",
+    // shadowOffset: { width: 0, height: 2 },
+    // shadowOpacity: 0.23,
+    // shadowRadius: 2.62,
+    // elevation: 4,
   },
 });
 

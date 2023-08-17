@@ -6,7 +6,7 @@ import {
   TextInput,
   Image,
 } from "react-native";
-import { colors, icon } from "../../constants";
+import { FONTS, colors, icon } from "../../constants";
 
 //component handing search functionality
 const Search = () => {
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     paddingLeft: 50,
     fontSize: 16,
     color: colors.grey,
+    fontFamily: FONTS.regular,
   },
   search_button: {
     position: "absolute",
@@ -60,6 +61,7 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: 15,
     fontWeight: "500",
+    fontFamily: FONTS.medium,
   },
 });
 
